@@ -19,5 +19,13 @@ public class ForSample {
 			}
 			System.out.println(j);
 		}
+
+		for (int k = 0; k < 5; k++) {
+			if (k == 2) {
+				System.out.println("finish");
+				break;
+			}
+			System.out.println(k);
+		}
 	}
 }
