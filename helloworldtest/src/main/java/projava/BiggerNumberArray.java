@@ -2,6 +2,7 @@ package projava;
 
 import java.util.Arrays;
 
+
 public class BiggerNumberArray {
 	public static void main(String[] args) {
 		int[] data = new int[] {3, 6, 9, 4, 2, 1, 5};
