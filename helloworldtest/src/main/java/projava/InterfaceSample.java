@@ -3,9 +3,9 @@ package projava;
 import java.util.List;
 
 public class InterfaceSample {
+	@FunctionalInterface
 	interface Named {
 		String name();
-
 		default String hello() {
 			return "こんにちは%sさん".formatted(name());
 		}
@@ -30,7 +30,13 @@ public class InterfaceSample {
 	record Box(int width, int height) implements Figure {}
 	record Oval(int width, int height) implements Figure {}
 
+	static void message(Named named) {
+		System.out.println("Hello " + named.name());
+	}
+
 	public static void main(String[] args) {
+		message(()->"no name");
+		message(new Student("ゴールドシップ", 100));
 		var people = List.of(
 			new Student("Kis", 89), 
 			new Teacher("hosoya", "Math"),
