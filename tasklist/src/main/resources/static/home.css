@@ -1,0 +1,41 @@
+body {
+	margin: 30px;
+	color: #283655;
+}
+input {
+	border: solid 1px #283655;
+}
+.hidden {
+	display: none;
+}
+
+/* タスク入力フォーム */
+.task_form {
+	padding: 0 10px 10px 0;
+	border: solid 1px #4d648d;
+}
+.task_form form {
+	display: grid;
+	grid-template-columns: 100px 1fr;
+}
+.task_form input[type="date"], select {
+	width: 150px;
+}
+
+/* タスク一覧 */
+.tasklist table {
+	width: 100%;
+	border: solid 1px;
+	border-collapse: collapse;
+}
+
+/* タスク更新ダイアログ */
+#updatingDialog {
+	display: none;
+	background: #FFFFFF;
+	border: 2px double #283655;
+	width: 500px;
+	position: fixed;
+	top: 120px;
+	z-index: 9999;
+}
