@@ -1,6 +1,5 @@
 package jp.gihyo.projava.tasklist;
 
-// import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -15,8 +14,6 @@ public class HomeController {
 
 	// create record for TaskItem
 	record TaskItem(String id, String task, String deadline, boolean done) {}
-	// create list of TaskItem
-	// private List<TaskItem> taskItems = new ArrayList<>();
 	// declare TaskListDao as dao
 	private final TaskListDao dao;
 
@@ -48,6 +45,29 @@ public class HomeController {
 		dao.add(item);
 
 		// Return the id of the TaskItem object
+		return "redirect:/list";
+	}
+
+	// Endpoint to delete taskItems from the list
+	@GetMapping("/delete")
+	String deleteItem(@RequestParam("id") String id) {
+		// delete item from dao by id
+		dao.delete(id);
+		// return home.html
+		return "redirect:/list";
+	}
+
+	// Endpoint to update taskItems from the list
+	@GetMapping("/update")
+	String updateItem(@RequestParam("id") String id,
+			@RequestParam("task") String task,
+			@RequestParam("deadline") String deadline,
+			@RequestParam("done") boolean done) {
+		// Create a new TaskItem object
+		TaskItem item = new TaskItem(id, task, deadline, done);
+		// update item from dao by id
+		dao.update(item);
+		// return home.html
 		return "redirect:/list";
 	}
 }

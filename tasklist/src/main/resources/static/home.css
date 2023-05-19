@@ -30,7 +30,7 @@ input {
 }
 
 /* タスク更新ダイアログ */
-#updatingDialog {
+#updateDialog {
 	display: none;
 	background: #FFFFFF;
 	border: 2px double #283655;

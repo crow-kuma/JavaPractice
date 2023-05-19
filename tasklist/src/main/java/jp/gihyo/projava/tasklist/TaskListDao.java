@@ -54,4 +54,24 @@ public class TaskListDao {
 		// return taskItems
 		return taskItems;
 	}
+
+	// Method to delete a task from the database
+	public int delete(String id) {
+		// define number to delete data from tasklist table by id
+		int number = jdbcTemplate.update("DELETE FROM tasklist WHERE id = ?", id);
+		// return number
+		return number;
+	}
+
+	// Method to update a task from the database
+	public int update(TaskItem taskItem) {
+		// define number to update data from tasklist table by id
+		int number = jdbcTemplate.update("UPDATE tasklist SET task = ?, deadline = ?, done = ? WHERE id = ?",
+				taskItem.task(), 
+				taskItem.deadline(), 
+				taskItem.done(), 
+				taskItem.id());
+		// return number
+		return number;
+	}
 }
