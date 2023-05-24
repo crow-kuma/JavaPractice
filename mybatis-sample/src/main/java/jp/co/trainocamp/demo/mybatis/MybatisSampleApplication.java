@@ -1,4 +1,4 @@
-package jp.co.trainocamp.demo.mybatissample;
+package jp.co.trainocamp.demo.mybatis;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;

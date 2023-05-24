@@ -12,7 +12,7 @@ public class UserListController {
 	@Autowired
 	private UserMapper userMapper;
 
-	@GetMapping("/")
+	@GetMapping("/users")
 	public ModelAndView listAll(){
 		ModelAndView mav = new ModelAndView("index");
 		mav.addObject("users", userMapper.selectAll());

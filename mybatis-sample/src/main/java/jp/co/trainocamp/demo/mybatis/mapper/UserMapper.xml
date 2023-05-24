@@ -8,7 +8,16 @@
 			<result column="NAME" jdbcType="VARCHAR" property="name" />
 			<result column="AGE" jdbcType="INTEGER" property="age" />
 		</resultMap>
+		<!-- Select -->
 		<select id="selectAll" resultMap="userMap">
 			SELECT ID, NAME, AGE FROM MYBATIS_USER
 		</select>
+		<!-- Update -->
+		<update id="update" >
+			UPDATE MYBATIS_USER SET NAME = #{name}, AGE = #{age} WHERE ID = #{userId}
+		</update>
+		<!-- Insert -->
+		<insert id="insert" >
+			INSERT INTO MYBATIS_USER (ID, NAME, AGE) VALUES (#{userId}, #{name}, #{age})
+		</insert>
 	</mapper>

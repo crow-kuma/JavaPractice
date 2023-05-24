@@ -9,4 +9,8 @@ import jp.co.trainocamp.demo.mybatis.entity.MybatisUser;
 @Mapper
 public interface UserMapper {
 	List<MybatisUser> selectAll();
+
+	void update(MybatisUser user);
+
+	void insert(MybatisUser user);
 }

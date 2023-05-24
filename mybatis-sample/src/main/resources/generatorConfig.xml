@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<context id="userdb" targetRuntime="MyBatis3">
+		<jdbcConnection driverClass="org.h2.Driver" 
+				connectionURL="jdbc:h2:/Users/NN/JavaPractice/mybatis-sample/h2db/userdb" 
+				userId="sa" password="" />
+		<javaModelGenerator
+				targetPackage="jp.co.trainocamp.demo.mybatis.entity"
+				targetProject="mybatis-sample/src/main/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		<sqlMapGenerator
+				targetPackage="jp.co.trainocamp.demo.mybatis.mapper"
+				targetProject="mybatis-sample/src/main/resources">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+		<javaClientGenerator type="XMLMAPPER"
+				targetPackage="jp.co.trainocamp.demo.mybatis.mapper"
+				targetProject="mybatis-sample/src/main/java">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+		<table tableName="MybatisPlace">
+			<property name="mapUnderscoreToCamelCase" value="true" />
+		</table>
+	</context>
+	
+
+</generatorConfiguration>
