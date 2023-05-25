@@ -8,5 +8,6 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
     </settings>
     <mappers>
         <mapper resource="src/main/java/jp/co/trainocamp/demo/mybatis/mapper/UserMapper.xml" />
+        <mapper resource="src/main/java/jp/co/trainocamp/demo/mybatis/mapper/MybatisPlaceMapper.xml" />
     </mappers>
 </configuration>

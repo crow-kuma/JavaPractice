@@ -4,26 +4,26 @@
 <generatorConfiguration>
 	<context id="userdb" targetRuntime="MyBatis3">
 		<jdbcConnection driverClass="org.h2.Driver" 
-				connectionURL="jdbc:h2:/Users/NN/JavaPractice/mybatis-sample/h2db/userdb" 
+				connectionURL="jdbc:h2:file:/Users/NN/JavaPractice/mybatis-sample/h2db/userdb" 
 				userId="sa" password="" />
 		<javaModelGenerator
 				targetPackage="jp.co.trainocamp.demo.mybatis.entity"
-				targetProject="mybatis-sample/src/main/java">
+				targetProject="src/main/java">
 			<property name="enableSubPackages" value="true" />
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
 		<sqlMapGenerator
 				targetPackage="jp.co.trainocamp.demo.mybatis.mapper"
-				targetProject="mybatis-sample/src/main/resources">
+				targetProject="src/main/java">
 			<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
 		<javaClientGenerator type="XMLMAPPER"
 				targetPackage="jp.co.trainocamp.demo.mybatis.mapper"
-				targetProject="mybatis-sample/src/main/java">
+				targetProject="src/main/java">
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
-		<table tableName="MybatisPlace">
-			<property name="mapUnderscoreToCamelCase" value="true" />
+		<table tableName="MYBATIS_PLACE" schema="">
+			<!-- <property name="mapUnderscoreToCamelCase" value="true" /> -->
 		</table>
 	</context>
 	

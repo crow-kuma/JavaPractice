@@ -2,16 +2,29 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.1.0'
 	id 'io.spring.dependency-management' version '1.1.0'
+
+	id 'com.qqviaja.gradle.MybatisGenerator' version '2.5'
 }
 
 group = 'jp.co.trainocamp.demo'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
 
+mybatisGenerator {
+	verbose = true
+	overwrite = true
+	configFile = 'src/main/resources/generatorConfig.xml'
+	dependencies {
+		mybatisGenerator 'org.mybatis.generator:mybatis-generator-core:1.4.2'
+		mybatisGenerator 'com.h2database:h2:2.1.214'
+	}
+}
+
 configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
 	}
+	mybatisGenerator
 }
 
 repositories {
