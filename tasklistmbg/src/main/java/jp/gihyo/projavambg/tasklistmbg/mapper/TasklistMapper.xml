@@ -118,6 +118,7 @@
     from TASKLIST
     where ID = #{id,jdbcType=VARCHAR}
   </select>
+    
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     <!--
       WARNING - @mbg.generated
@@ -268,4 +269,8 @@
       DONE = #{done,jdbcType=BOOLEAN}
     where ID = #{id,jdbcType=VARCHAR}
   </update>
+
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ID, TASK, DEADLINE, DONE from TASKLIST
+  </select>
 </mapper>
