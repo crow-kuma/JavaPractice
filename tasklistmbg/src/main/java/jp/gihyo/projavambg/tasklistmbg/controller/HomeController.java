@@ -13,7 +13,7 @@ import jp.gihyo.projavambg.tasklistmbg.mapper.TasklistMapper;
 
 @Controller
 public class HomeController {
-	public record TaskItem(String id, String task, String deadline, boolean done) {}
+	// public record TaskItem(String id, String task, String deadline, boolean done) {}
 
 	@Autowired
 	private TasklistMapper tasklistMapper;

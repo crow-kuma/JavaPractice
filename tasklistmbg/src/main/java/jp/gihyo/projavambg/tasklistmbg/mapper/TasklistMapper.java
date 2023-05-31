@@ -2,12 +2,10 @@ package jp.gihyo.projavambg.tasklistmbg.mapper;
 
 import java.util.List;
 
-// import jp.gihyo.projavambg.tasklistmbg.controller.HomeController.TaskItem;
 import jp.gihyo.projavambg.tasklistmbg.entity.Tasklist;
 import jp.gihyo.projavambg.tasklistmbg.entity.TasklistExample;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
-// import org.h2.util.Task;
 
 @Mapper
 public interface TasklistMapper {
